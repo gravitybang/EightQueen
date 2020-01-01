@@ -1,8 +1,7 @@
 #include<iostream>
 using namespace std;
 
-
-void printSolition(int a[],int n)
+void printSolution(int a[],int n)
 {
 	for(int i=0;i<n;i++){
 		cout<<a[i]<<" ";
@@ -26,8 +25,7 @@ bool find(int a[],int r,int c){
 		}
 		if(j==r){
 			break;
-		}
-		
+		}	
 	}
 	if(i==9){
 		
@@ -38,7 +36,7 @@ bool find(int a[],int r,int c){
 	else{
 		a[r-1]=i;
 		if(r==8){
-			printSolition(a,8);
+			printSolution(a,8);
 			find(a,r-1,a[r-2]+1);
 			
 		}
@@ -48,13 +46,10 @@ bool find(int a[],int r,int c){
 	
 }
 
-
 int main(){
 	int a[8];
 
 	find(a,1,1);
-	
-	
 	
 	return 0;
 
